@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据结构学习笔记 | Golden_Ridge</title><meta name="author" content="Golden_Ridge"><meta name="copyright" content="Golden_Ridge"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="$\color{cyan}{data structure}$ 本篇文章将对一些数据结构进行梳理，希望能对自己的编程起到一些帮助。  1. $\color{cyan}{vector}$ - 动态数组 $\color{cyan}{vector}$ 是一个顺序容器，可以存放各种类型的对象。  1.1 存储方式：1vector&lt;dt&gt; vn;  $dt$（$data$ $type$）：数据类型">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据结构学习笔记 | Golden_Ridge</title><meta name="author" content="Golden_Ridge"><meta name="copyright" content="Golden_Ridge"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="## $\color{cyan}{data structure}$  - 本篇文章将对一些数据结构进行梳理，希望能对自己的编程起到一些帮助。  ### 1. $\color{cyan}{vector}$ - 动态数组   - $\color{cyan}{vector}$ 是一个顺序容器，可以存放各种类型的对象。  #### 1.1 存储方式：  1vector&lt;dt&gt; vn; 1.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构学习笔记">
 <meta property="og:url" content="http://example.com/2026/03/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Golden_Ridge">
-<meta property="og:description" content="$\color{cyan}{data structure}$ 本篇文章将对一些数据结构进行梳理，希望能对自己的编程起到一些帮助。  1. $\color{cyan}{vector}$ - 动态数组 $\color{cyan}{vector}$ 是一个顺序容器，可以存放各种类型的对象。  1.1 存储方式：1vector&lt;dt&gt; vn;  $dt$（$data$ $type$）：数据类型">
+<meta property="og:description" content="## $\color{cyan}{data structure}$  - 本篇文章将对一些数据结构进行梳理，希望能对自己的编程起到一些帮助。  ### 1. $\color{cyan}{vector}$ - 动态数组   - $\color{cyan}{vector}$ 是一个顺序容器，可以存放各种类型的对象。  #### 1.1 存储方式：  1vector&lt;dt&gt; vn; 1.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://free.picui.cn/free/2026/03/04/69a81776ed5f6.png">
 <meta property="article:published_time" content="2026-03-05T00:33:48.000Z">
-<meta property="article:modified_time" content="2026-03-05T01:46:43.041Z">
+<meta property="article:modified_time" content="2026-03-05T03:31:21.639Z">
 <meta property="article:author" content="Golden_Ridge">
 <meta property="article:tag" content="OI，学习笔记，数据结构。">
 <meta name="twitter:card" content="summary">
@@ -18,7 +18,7 @@
   "url": "http://example.com/2026/03/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/",
   "image": "https://free.picui.cn/free/2026/03/04/69a81776ed5f6.png",
   "datePublished": "2026-03-05T00:33:48.000Z",
-  "dateModified": "2026-03-05T01:46:43.041Z",
+  "dateModified": "2026-03-05T03:31:21.639Z",
   "author": [
     {
       "@type": "Person",
@@ -157,198 +157,222 @@
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '数据结构学习笔记',
   isHighlightShrink: false,
-  isToc: true,
+  isToc: false,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(https://free.picui.cn/free/2026/03/04/69a8237c1fd55.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时光档案</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://free.picui.cn/free/2026/03/04/69a81776ed5f6.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://free.picui.cn/free/2026/03/04/69a81a0b725b9.png" alt="Logo"><span class="site-name">Golden_Ridge</span></a><a class="nav-page-title" href="/"><span class="site-name">数据结构学习笔记</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时光档案</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">数据结构学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-05T00:33:48.000Z" title="发表于 2026-03-05 08:33:48">2026-03-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-05T01:46:43.041Z" title="更新于 2026-03-05 09:46:43">2026-03-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/OI%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">OI学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="color-cyan-data-structure"><a href="#color-cyan-data-structure" class="headerlink" title="$\color{cyan}{data structure}$"></a>$\color{cyan}{data structure}$</h2><ul>
-<li>本篇文章将对一些数据结构进行梳理，希望能对自己的编程起到一些帮助。</li>
-</ul>
-<h3 id="1-color-cyan-vector-动态数组"><a href="#1-color-cyan-vector-动态数组" class="headerlink" title="1. $\color{cyan}{vector}$ - 动态数组"></a>1. $\color{cyan}{vector}$ - 动态数组</h3><ul>
-<li>$\color{cyan}{vector}$ 是一个顺序容器，可以存放各种类型的对象。</li>
-</ul>
-<h4 id="1-1-存储方式："><a href="#1-1-存储方式：" class="headerlink" title="1.1 存储方式："></a>1.1 存储方式：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>$dt$（$data$ $type$）：数据类型。</li>
-<li>$vn$（$variable$ $name$）：变量名。</li>
-</ol>
-<h4 id="1-2-包含函数及作用："><a href="#1-2-包含函数及作用：" class="headerlink" title="1.2 包含函数及作用："></a>1.2 包含函数及作用：</h4><ol>
-<li>$push$_$back$（元素）：增加一个元素到向量后面。</li>
-<li>$insert$（位置，元素）：插入元素到向量的指定位置。</li>
-<li>$insert$（位置，个数 $n$，元素）：插入 $n$ 个相同的元素到向量的指定位置。</li>
-<li>$insert$（位置，向量头指针 $first$，尾指针 $end$）：将另一个向量从 $first$ 开始到 $end$ 结束（不包括 $end$）之间的内容插入该向量的指定位置。</li>
-<li>$erase$（位置）：删除指定位置的元素。</li>
-<li>$erase$（开始位置，结束位置）：删除向量中 $[first,last)$ 中元素。</li>
-<li>$pop$_$back$（）：弹出（删除）向量中的最后一个元素。</li>
-<li>$clear$（）：清除向量所有元素，$size$（）变为 $0$。</li>
-<li>运算符 $[i]$：取向量下标为 $i$ 的元素。</li>
-<li>$front$（）：取向量第一个元素。</li>
-<li>$back$（）：取向量最后一个元素。</li>
-<li>$begin$（）：返回向量头指针（迭代器），指向第一个元素。</li>
-<li>$end$（）：返回向量尾指针（迭代器），指向最后一个元素的下一个位置。</li>
-<li>$rbegin$（）：反向迭代器，指向最后一个元素。</li>
-<li>$rend$（）：反向迭代器，指向第一个元素之前的位置。</li>
-<li>$size$（）：返回向量中实际元素的个数。</li>
-<li>$resize$（大小）：重新设定向量的大小，也解释可以保存元素的个数。</li>
-<li>$max$_$size$（）：得到 $\color{cyan}{vector}$ 最大可以是多大。</li>
-<li>$empty$（）：$bool$ 类型，判断向量是否为空。</li>
-<li>$swap$（）：交换两个同类型向量的数据。</li>
-</ol>
-<hr>
-<h3 id="2-color-cyan-deque-双端队列"><a href="#2-color-cyan-deque-双端队列" class="headerlink" title="2. $\color{cyan}{deque}$ - 双端队列"></a>2. $\color{cyan}{deque}$ - 双端队列</h3><ul>
-<li>$\color{cyan}{deque}$ 是一种可以同时对首、尾执行添加和删除工作的数据结构，是单调队列的一种变形。</li>
-<li>在这次整理中，我将不会整理单调队列，因为单调队列的所有函数，双端队列都有包括。</li>
-</ul>
-<h4 id="2-1-存储方式："><a href="#2-1-存储方式：" class="headerlink" title="2.1 存储方式："></a>2.1 存储方式：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deque&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>$dt$（$data$ $type$）：数据类型。</li>
-<li>$vn$（$variable$ $name$）：变量名。</li>
-</ol>
-<h4 id="2-2-包含函数及作用："><a href="#2-2-包含函数及作用：" class="headerlink" title="2.2 包含函数及作用："></a>2.2 包含函数及作用：</h4><ol>
-<li>$push$_$back$（元素）：将元素添加到队列的尾部。</li>
-<li>$push$_$front$（元素）：将元素添加到队列的头部。</li>
-<li>$pop$_$back$（）：删除队列尾部的元素。</li>
-<li>$pop$_$front$（）：删除队列头部的元素。</li>
-<li>$front$（）：返回队列头部元素。</li>
-<li>$back$（）：返回队列尾部元素。</li>
-<li>$size$（）：返回队列中实际元素的个数。</li>
-<li>$empty$（）：$bool$ 类型，判断队列是否为空。</li>
-</ol>
-<hr>
-<h3 id="3-color-cyan-stack-栈"><a href="#3-color-cyan-stack-栈" class="headerlink" title="3. $\color{cyan}{stack}$ - 栈"></a>3. $\color{cyan}{stack}$ - 栈</h3><ul>
-<li>$\color{cyan}{stack}$ 是一种先进后出的数据结构，与单调队列恰恰相反。</li>
-</ul>
-<h4 id="3-1-存储方式："><a href="#3-1-存储方式：" class="headerlink" title="3.1 存储方式："></a>3.1 存储方式：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stack&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>$dt$（$data$ $type$）：数据类型。</li>
-<li>$vn$（$variable$ $name$）：变量名。</li>
-</ol>
-<h4 id="3-2-包含函数及作用："><a href="#3-2-包含函数及作用：" class="headerlink" title="3.2 包含函数及作用："></a>3.2 包含函数及作用：</h4><ol>
-<li>$push$（元素）：将元素压入栈顶。</li>
-<li>$pop$（）：将栈顶元素移除。</li>
-<li>$top$（）：返回栈顶元素。</li>
-<li>$size$（）：返回栈中实际元素的个数。</li>
-<li>$empty$（）：$bool$ 类型，判断栈是否为空。</li>
-</ol>
-<hr>
-<h3 id="4-color-cyan-priority-queue-优先队列"><a href="#4-color-cyan-priority-queue-优先队列" class="headerlink" title="4. $\color{cyan}{priority_queue}$ - 优先队列"></a>4. $\color{cyan}{priority_queue}$ - 优先队列</h3><ul>
-<li>$\color{cyan}{priority_queue}$ 是一种按照从大到小或从小到大的顺序自动排序的数据结构，它也是队列的一种。</li>
-<li>$\color{cyan}{priority_queue}$ 有两种，分别是大根堆和小根堆，接下来，我们一一介绍。</li>
-</ul>
-<h4 id="4-1-color-cyan-max-heap-大根堆"><a href="#4-1-color-cyan-max-heap-大根堆" class="headerlink" title="4.1 $\color{cyan}{max_heap}$ - 大根堆"></a>4.1 $\color{cyan}{max_heap}$ - 大根堆</h4><ul>
-<li>$\color{cyan}{max_heap}$ 是按照从小到大的顺序自动排序的一种数据结构，也是优先队列的默认形式。</li>
-</ul>
-<h5 id="4-1-1-存储方式："><a href="#4-1-1-存储方式：" class="headerlink" title="4.1.1 存储方式："></a>4.1.1 存储方式：</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
-<p>或</p>
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(https://free.picui.cn/free/2026/03/04/69a8237c1fd55.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时光档案</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://free.picui.cn/free/2026/03/04/69a81776ed5f6.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://free.picui.cn/free/2026/03/04/69a81a0b725b9.png" alt="Logo"><span class="site-name">Golden_Ridge</span></a><a class="nav-page-title" href="/"><span class="site-name">数据结构学习笔记</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时光档案</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">数据结构学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-05T00:33:48.000Z" title="发表于 2026-03-05 08:33:48">2026-03-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-05T03:31:21.639Z" title="更新于 2026-03-05 11:31:21">2026-03-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/OI%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">OI学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container">
+## $\color{cyan}{data structure}$
+
+- 本篇文章将对一些数据结构进行梳理，希望能对自己的编程起到一些帮助。
+
+### 1. $\color{cyan}{vector}$ - 动态数组 
+
+- $\color{cyan}{vector}$ 是一个顺序容器，可以存放各种类型的对象。
+
+#### 1.1 存储方式：
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
+1. $dt$（$data$ $type$）：数据类型。
+2. $vn$（$variable$ $name$）：变量名。
+
+#### 1.2 包含函数及作用：
+
+1. $push$_$back$（元素）：增加一个元素到向量后面。
+2. $insert$（位置，元素）：插入元素到向量的指定位置。
+3. $insert$（位置，个数 $n$，元素）：插入 $n$ 个相同的元素到向量的指定位置。
+4. $insert$（位置，向量头指针 $first$，尾指针 $end$）：将另一个向量从 $first$ 开始到 $end$ 结束（不包括 $end$）之间的内容插入该向量的指定位置。
+5. $erase$（位置）：删除指定位置的元素。
+6. $erase$（开始位置，结束位置）：删除向量中 $[first,last)$ 中元素。
+7. $pop$_$back$（）：弹出（删除）向量中的最后一个元素。
+8. $clear$（）：清除向量所有元素，$size$（）变为 $0$。
+9. 运算符 $[i]$：取向量下标为 $i$ 的元素。
+10. $front$（）：取向量第一个元素。
+11. $back$（）：取向量最后一个元素。
+12. $begin$（）：返回向量头指针（迭代器），指向第一个元素。
+13. $end$（）：返回向量尾指针（迭代器），指向最后一个元素的下一个位置。
+14. $rbegin$（）：反向迭代器，指向最后一个元素。
+15. $rend$（）：反向迭代器，指向第一个元素之前的位置。
+16. $size$（）：返回向量中实际元素的个数。
+17. $resize$（大小）：重新设定向量的大小，也解释可以保存元素的个数。
+18. $max$_$size$（）：得到 $\color{cyan}{vector}$ 最大可以是多大。
+19. $empty$（）：$bool$ 类型，判断向量是否为空。
+20. $swap$（）：交换两个同类型向量的数据。
+---
+### 2. $\color{cyan}{deque}$ - 双端队列
+
+- $\color{cyan}{deque}$ 是一种可以同时对首、尾执行添加和删除工作的数据结构，是单调队列的一种变形。
+- 在这次整理中，我将不会整理单调队列，因为单调队列的所有函数，双端队列都有包括。
+
+#### 2.1 存储方式：
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deque&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
+1. $dt$（$data$ $type$）：数据类型。
+2. $vn$（$variable$ $name$）：变量名。
+
+#### 2.2 包含函数及作用：
+
+1. $push$_$back$（元素）：将元素添加到队列的尾部。
+2. $push$_$front$（元素）：将元素添加到队列的头部。
+3. $pop$_$back$（）：删除队列尾部的元素。
+4. $pop$_$front$（）：删除队列头部的元素。
+5. $front$（）：返回队列头部元素。
+6. $back$（）：返回队列尾部元素。
+7. $size$（）：返回队列中实际元素的个数。
+8. $empty$（）：$bool$ 类型，判断队列是否为空。
+---
+### 3. $\color{cyan}{stack}$ - 栈
+
+- $\color{cyan}{stack}$ 是一种先进后出的数据结构，与单调队列恰恰相反。
+
+#### 3.1 存储方式：
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stack&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
+1. $dt$（$data$ $type$）：数据类型。
+2. $vn$（$variable$ $name$）：变量名。
+
+#### 3.2 包含函数及作用：
+
+1. $push$（元素）：将元素压入栈顶。
+2. $pop$（）：将栈顶元素移除。
+3. $top$（）：返回栈顶元素。
+4. $size$（）：返回栈中实际元素的个数。
+5. $empty$（）：$bool$ 类型，判断栈是否为空。
+---
+### 4. $\color{cyan}{priority\_queue}$ - 优先队列
+
+- $\color{cyan}{priority\_queue}$ 是一种按照从大到小或从小到大的顺序自动排序的数据结构，它也是队列的一种。
+- $\color{cyan}{priority\_queue}$ 有两种，分别是大根堆和小根堆，接下来，我们一一介绍。
+
+#### 4.1 $\color{cyan}{max\_heap}$ - 大根堆
+
+- $\color{cyan}{max\_heap}$ 是按照从小到大的顺序自动排序的一种数据结构，也是优先队列的默认形式。
+
+##### 4.1.1 存储方式：
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
+或
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;dt&gt;,vector&lt;dt&gt;,less&lt;dt&gt; &gt; vn;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>$dt$（$data$ $type$）：数据类型。</li>
-<li>$vn$（$variable$ $name$）：变量名。</li>
-</ol>
-<h5 id="4-1-2-包含函数及作用："><a href="#4-1-2-包含函数及作用：" class="headerlink" title="4.1.2 包含函数及作用："></a>4.1.2 包含函数及作用：</h5><ol>
-<li>$push$（元素）：将元素插入优先队列的尾部。</li>
-<li>$pop$（）：删除优先队列的第一个元素。</li>
-<li>$top$（）：返回优先队列的第一个元素。</li>
-<li>$size$（）：返回优先队列中中实际元素的个数。</li>
-<li>$empty$（）：$bool$ 类型，判断优先队列是否为空。</li>
-</ol>
-<h4 id="4-2-color-cyan-min-heap-小根堆"><a href="#4-2-color-cyan-min-heap-小根堆" class="headerlink" title="4.2 $\color{cyan}{min_heap}$ - 小根堆"></a>4.2 $\color{cyan}{min_heap}$ - 小根堆</h4><ul>
-<li>$\color{cyan}{min_heap}$ 是按照从大到小的顺序自动排序的一种数据结构，与大根堆的从小到大有所不同</li>
-</ul>
-<h5 id="4-2-1-存储方式："><a href="#4-2-1-存储方式：" class="headerlink" title="4.2.1 存储方式："></a>4.2.1 存储方式：</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;dt&gt;,vector&lt;dt&gt;,greater&lt;dt&gt; &gt; vn;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>$dt$（$data$ $type$）：数据类型。</li>
-<li>$vn$（$variable$ $name$）：变量名。</li>
-</ol>
-<h5 id="4-2-2-包含函数及作用："><a href="#4-2-2-包含函数及作用：" class="headerlink" title="4.2.2 包含函数及作用："></a>4.2.2 包含函数及作用：</h5><ol>
-<li>$push$（元素）：将元素插入优先队列的尾部。</li>
-<li>$pop$（）：删除优先队列的第一个元素。</li>
-<li>$top$（）：返回优先队列的第一个元素。</li>
-<li>$size$（）：返回优先队列中实际元素的个数。</li>
-<li>$empty$（）：$bool$ 类型，判断优先队列是否为空。</li>
-</ol>
-<hr>
-<h3 id="5-color-cyan-list-链表"><a href="#5-color-cyan-list-链表" class="headerlink" title="5. $\color{cyan}{list}$ - 链表"></a>5. $\color{cyan}{list}$ - 链表</h3><ul>
-<li>$\color{cyan}{list}$ 是一个线性双向链表结构，它的数据由若干个节点构成。</li>
-</ul>
-<h4 id="5-1-存储方式："><a href="#5-1-存储方式：" class="headerlink" title="5.1 存储方式："></a>5.1 存储方式：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>$dt$（$data$ $type$）：数据类型。</li>
-<li>$vn$（$variable$ $name$）：变量名。</li>
-</ol>
-<h4 id="5-2-包含函数及作用："><a href="#5-2-包含函数及作用：" class="headerlink" title="5.2 包含函数及作用："></a>5.2 包含函数及作用：</h4><ol>
-<li>$push$_$back$（元素）：将元素添加到链表的尾部。</li>
-<li>$push$_$front$（元素）：将元素添加到链表的头部。</li>
-<li>$pop$_$back$（）：删除链表尾部的元素。</li>
-<li>$pop$_$front$（）：删除链表头部的元素。</li>
-<li>$insert$（）：在指定位置插入一个或多个元素。</li>
-<li>$begin$（）：获取链表的起始地址。</li>
-<li>$end$（）：获取链表的结束地址。</li>
-<li>$size$（）：返回链表的元素个数。</li>
-<li>$empty$（）：$bool$ 类型，判断队列是否为空。</li>
-<li>$clear$（）：清空链表。</li>
-<li>$max$_$size$（）：得到链表最大可以是多大。</li>
-<li>$swap$（）：交换链表中的两个元素。</li>
-<li>$reverse$（开始地址，结束地址）：翻转对应区间的链表元素。</li>
-<li>$erase$（开始地址，结束地址）：删除链表指定范围之间的元素。</li>
-<li>$remove$（元素）：删除所有与括号中元素相等的元素。</li>
-<li>$sort$（链表对象）：链表元素排序。</li>
-</ol>
-<h3 id="6-color-cyan-set-集合"><a href="#6-color-cyan-set-集合" class="headerlink" title="6. $\color{cyan}{set}$ - 集合"></a>6. $\color{cyan}{set}$ - 集合</h3><ul>
-<li>$\color{cyan}{set}$ 是关联元素的一种，会进行自动排序，且不能有重复的元素。</li>
-</ul>
-<h4 id="6-1-存储方式："><a href="#6-1-存储方式：" class="headerlink" title="6.1 存储方式："></a>6.1 存储方式：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>$dt$（$data$ $type$）：数据类型。</li>
-<li>$vn$（$variable$ $name$）：变量名。</li>
-</ol>
-<p>可以根据需要改变顺序：</p>
-<ol>
-<li>从小到大（默认）：</li>
-</ol>
+1. $dt$（$data$ $type$）：数据类型。
+2. $vn$（$variable$ $name$）：变量名。
+
+##### 4.1.2 包含函数及作用：
+
+1. $push$（元素）：将元素插入优先队列的尾部。
+2. $pop$（）：删除优先队列的第一个元素。
+3. $top$（）：返回优先队列的第一个元素。
+4. $size$（）：返回优先队列中中实际元素的个数。
+5. $empty$（）：$bool$ 类型，判断优先队列是否为空。
+
+#### 4.2 $\color{cyan}{min\_heap}$ - 小根堆
+
+- $\color{cyan}{min\_heap}$ 是按照从大到小的顺序自动排序的一种数据结构，与大根堆的从小到大有所不同
+
+##### 4.2.1 存储方式：
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;dt&gt;,vector&lt;dt&gt;,greater&lt;dt&gt; &gt; vn;</span><br></pre></td></tr></table></figure>
+1. $dt$（$data$ $type$）：数据类型。
+2. $vn$（$variable$ $name$）：变量名。
+
+##### 4.2.2 包含函数及作用：
+
+1. $push$（元素）：将元素插入优先队列的尾部。
+2. $pop$（）：删除优先队列的第一个元素。
+3. $top$（）：返回优先队列的第一个元素。
+4. $size$（）：返回优先队列中实际元素的个数。
+5. $empty$（）：$bool$ 类型，判断优先队列是否为空。
+---
+### 5. $\color{cyan}{list}$ - 链表
+
+- $\color{cyan}{list}$ 是一个线性双向链表结构，它的数据由若干个节点构成。
+
+#### 5.1 存储方式：
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
+1. $dt$（$data$ $type$）：数据类型。
+2. $vn$（$variable$ $name$）：变量名。
+
+#### 5.2 包含函数及作用：
+
+1. $push$_$back$（元素）：将元素添加到链表的尾部。
+2. $push$_$front$（元素）：将元素添加到链表的头部。
+3. $pop$_$back$（）：删除链表尾部的元素。
+4. $pop$_$front$（）：删除链表头部的元素。
+5. $insert$（）：在指定位置插入一个或多个元素。
+6. $begin$（）：获取链表的起始地址。
+7. $end$（）：获取链表的结束地址。
+8. $size$（）：返回链表的元素个数。
+9. $empty$（）：$bool$ 类型，判断队列是否为空。
+10. $clear$（）：清空链表。
+11. $max$_$size$（）：得到链表最大可以是多大。
+12. $swap$（）：交换链表中的两个元素。
+13. $reverse$（开始地址，结束地址）：翻转对应区间的链表元素。
+14. $erase$（开始地址，结束地址）：删除链表指定范围之间的元素。
+15. $remove$（元素）：删除所有与括号中元素相等的元素。
+16. $sort$（链表对象）：链表元素排序。
+
+### 6. $\color{cyan}{set}$ - 集合
+
+- $\color{cyan}{set}$ 是关联元素的一种，会进行自动排序，且不能有重复的元素。
+
+#### 6.1 存储方式：
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set&lt;dt&gt; vn;</span><br></pre></td></tr></table></figure>
+1. $dt$（$data$ $type$）：数据类型。
+2. $vn$（$variable$ $name$）：变量名。
+
+可以根据需要改变顺序：
+
+1. 从小到大（默认）：
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set&lt;dt,less&lt;dt&gt; &gt; vn;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>从大到小：</li>
-</ol>
+2. 从大到小：
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set&lt;dt,greater&lt;dt&gt; &gt; vn;</span><br></pre></td></tr></table></figure>
 
-<h4 id="6-2-包含函数及作用："><a href="#6-2-包含函数及作用：" class="headerlink" title="6.2 包含函数及作用："></a>6.2 包含函数及作用：</h4><ol>
-<li>$begin$（）：获取 $\color{cyan}{set}$ 容器的起始地址。</li>
-<li>$end$（）：获取 $\color{cyan}{set}$ 容器的结束地址。</li>
-<li>$insert$（）：插入 $\color{cyan}{set}$ 容器。</li>
-<li>$erase$（开始地址，结束地址）：删除 $\color{cyan}{set}$ 容器指定范围之间的元素。</li>
-<li>$find$（）：查找匹配的元素迭代器，若不存在，返回 <code>set.end()</code>。</li>
-<li>$clear$（）：清空 $\color{cyan}{set}$ 容器。</li>
-<li>$size$（）：返回 $\color{cyan}{set}$ 容器中元素的个数。</li>
-<li>$empty$（）：$bool$ 类型，判断 $\color{cyan}{set}$ 容器是否为空。</li>
-</ol>
-<hr>
-<h3 id="7-color-cyan-map"><a href="#7-color-cyan-map" class="headerlink" title="7. $\color{cyan}{map}$"></a>7. $\color{cyan}{map}$</h3><ul>
-<li>$\color{cyan}{map}$ 是关联容器的一种，容器中的元素通过关键字排序。</li>
-<li>$\color{cyan}{map}$ 的每个元素都分为关键字和值两部分，并且不允许有多个元素的关键字相同。</li>
-</ul>
-<h4 id="7-1-存储方式："><a href="#7-1-存储方式：" class="headerlink" title="7.1 存储方式："></a>7.1 存储方式：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map&lt;ke,va&gt; vn;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>$ke$（$key$）：关键字。</li>
-<li>$va$（$value$）：值。</li>
-<li>$vn$（$variable$ $name$）：变量名。</li>
-</ol>
-<h4 id="7-2-包含函数及作用："><a href="#7-2-包含函数及作用：" class="headerlink" title="7.2 包含函数及作用："></a>7.2 包含函数及作用：</h4><ol>
-<li>$begin$（）：获取 $\color{cyan}{map}$ 的第一个元素的位置，返回第一个元素迭代器。</li>
-<li>$end$（）：获取 $\color{cyan}{map}$ 的结束位置（最后一个元素的后面的一个位置）。</li>
-<li>$insert$（）：插入元素到 $\color{cyan}{map}$，元素一般是 $make_pair$（关键字，值）。</li>
-<li>$erase$（关键字&#x2F;迭代器）：删除 $\color{cyan}{map}$ 指定位置或者指定关键字的元素。</li>
-<li>$find$（）：返回指定关键字位置的位置迭代器，若不存在，返回 <code>map.end()</code>。</li>
-<li>$clear$（）：清空 $\color{cyan}{map}$。</li>
-<li>$size$（）：返回 $\color{cyan}{map}$ 中元素的个数。</li>
-<li>$empty$（）：$bool$ 类型，判断 $\color{cyan}{map}$ 是否为空。</li>
-<li>运算符 $[i]$：取 $\color{cyan}{map}$ 下标为 $i$ 的元素。</li>
-<li>$count$（）：统计指定关键字的元素的个数，由于 $\color{cyan}{map}$ 每个元素的关键字都不相同，$count$ 的结果只能是 $1$ 或者 0。</li>
-</ol>
-<hr>
-<h3 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h3><ul>
-<li>数据结构是 $c$++ 中极其重要的部分，从数组到 $\color{cyan}{vector}$，它一步步看着我们变得强大，我们不必追忆，只需向着星辰大海不断前行！</li>
-</ul>
-<p>$The$ $end$ $.$</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Golden_Ridge</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/03/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">http://example.com/2026/03/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Golden_Ridge</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OI%EF%BC%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%82/">OI，学习笔记，数据结构。</a></div><div class="post-share"><div class="social-share" data-image="https://free.picui.cn/free/2026/03/04/69a81776ed5f6.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/03/05/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="三角函数学习笔记"><img class="cover" src="https://free.picui.cn/free/2026/03/04/69a81794f3614.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">三角函数学习笔记</div></div><div class="info-2"><div class="info-item-1">三角函数学习笔记Part.0 目录 任意角与弧度制 任意角 弧度制   三角函数基础知识 三角函数新定义 同角三角函数关系   正弦定理及其应用 叙述并证明正弦定理    Part.1 任意角与弧度制1.1 任意角这，是我们在小学二年级就学过的角，由两条射线（边）和一个顶点组成，两条射线（边）的夹角的度数就是这个角的度数。  这个定义对于广大小学生与初中生群体来说，再熟悉不过了。但是，在生活中，我们难免会遇到比 $360^\circ$ 还要大得多的角，为解决这个问题，我们就要引出任意角。  在高中里，我们定义一个角的度数，为这个角在坐标轴上由始边旋转到终边的角度。其中，这个角的顶点在原点 $O$，且一个角对应唯一且确定的终边，但一个终边可以对应无数个角，角的大小决定了终边的位置。与小学与初中的不同，旋转的角度，是可以大于 $360^\circ$ 的。 想必大家都注意到，刚才这个角是往逆时针方向转动的，那有的读者要问了，有没有按顺时针转的角？有的。接下来，我们引出正角和负角的概念。  沿始边逆时针转动的角，是正角；沿始边顺时针转动的角，是负角。逆时针转，角变大；顺时针转，角变小。现...</div></div></div></a><a class="pagination-related" href="/2026/03/05/%E9%B8%AD%E6%A3%8B/" title="鸭棋"><img class="cover" src="https://free.picui.cn/free/2026/03/04/69a8225a4c4f1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">鸭棋</div></div><div class="info-2"><div class="info-item-1">题解：P5380 [THUPC 2019] 鸭棋前置芝士：模拟。推荐题目： P2482 [SDOI2010] 猪国杀。 P4911 河童重工的计算机。 P7147 [THUPC 2021 初赛] 麻将模拟器。  写在前面这道题是本人第一道独立完成的大模拟，前后一共用了 $15$ 个小时左右，特写此文以示纪念。 在完成的过程中，我有好几次卡壳的地方：  绊脚的位置（马，象，鸭各一次）。 判断将军（一次）。 坐标的位置（反了一次）。 判断游戏结束（忘记一次）。  这些等会儿会重点讲。 以下正文中，如出现 $cpp$ 框，要么是代码，要么是模拟棋盘。模拟棋盘中，$wu$ 表示空格，$ba$ 表示绊脚，其他棋子用拼音中的前两个字母表示，如鸭就是 $ya$，马就是 $ma$。 那么我们废话不多说，开始进入正文。 题意解析鸭棋是一款与象棋高度相似的博弈棋类游戏，大部分规则与象棋相同，不同的部分如下列举：  将象棋中的炮转换为鸭（整个程序里最烦的棋子），有两个绊脚点，位置分布为：  123wu wu wu wuwu wu ba wuya ba wu wu 即对于任意 $s_x,s_y\in \...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Golden_Ridge</div><div class="author-info-description">欢迎来到Golden_Ridge的个人博客</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Mirror-victor" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="/2896195463@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#color-cyan-data-structure"><span class="toc-number">1.</span> <span class="toc-text">$\color{cyan}{data structure}$</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-color-cyan-vector-%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84"><span class="toc-number">1.1.</span> <span class="toc-text">1. $\color{cyan}{vector}$ - 动态数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 存储方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0%E5%8F%8A%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 包含函数及作用：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-color-cyan-deque-%E5%8F%8C%E7%AB%AF%E9%98%9F%E5%88%97"><span class="toc-number">1.2.</span> <span class="toc-text">2. $\color{cyan}{deque}$ - 双端队列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 存储方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0%E5%8F%8A%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 包含函数及作用：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-color-cyan-stack-%E6%A0%88"><span class="toc-number">1.3.</span> <span class="toc-text">3. $\color{cyan}{stack}$ - 栈</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 存储方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0%E5%8F%8A%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 包含函数及作用：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-color-cyan-priority-queue-%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97"><span class="toc-number">1.4.</span> <span class="toc-text">4. $\color{cyan}{priority_queue}$ - 优先队列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-color-cyan-max-heap-%E5%A4%A7%E6%A0%B9%E5%A0%86"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 $\color{cyan}{max_heap}$ - 大根堆</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-1-%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">4.1.1 存储方式：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-1-2-%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0%E5%8F%8A%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.4.1.2.</span> <span class="toc-text">4.1.2 包含函数及作用：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-color-cyan-min-heap-%E5%B0%8F%E6%A0%B9%E5%A0%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 $\color{cyan}{min_heap}$ - 小根堆</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#4-2-1-%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">4.2.1 存储方式：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-2-2-%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0%E5%8F%8A%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.4.2.2.</span> <span class="toc-text">4.2.2 包含函数及作用：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-color-cyan-list-%E9%93%BE%E8%A1%A8"><span class="toc-number">1.5.</span> <span class="toc-text">5. $\color{cyan}{list}$ - 链表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1 存储方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0%E5%8F%8A%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2 包含函数及作用：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-color-cyan-set-%E9%9B%86%E5%90%88"><span class="toc-number">1.6.</span> <span class="toc-text">6. $\color{cyan}{set}$ - 集合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.6.1.</span> <span class="toc-text">6.1 存储方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0%E5%8F%8A%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.6.2.</span> <span class="toc-text">6.2 包含函数及作用：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-color-cyan-map"><span class="toc-number">1.7.</span> <span class="toc-text">7. $\color{cyan}{map}$</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">1.7.1.</span> <span class="toc-text">7.1 存储方式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0%E5%8F%8A%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.7.2.</span> <span class="toc-text">7.2 包含函数及作用：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93%EF%BC%9A"><span class="toc-number">1.8.</span> <span class="toc-text">小结：</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/03/05/%E4%BC%91%E9%97%B2%E6%80%A5%E9%9C%80%E5%93%81/" title="休闲急需品"><img src="https://free.picui.cn/free/2026/03/04/69a8225f6fb29.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="休闲急需品"/></a><div class="content"><a class="title" href="/2026/03/05/%E4%BC%91%E9%97%B2%E6%80%A5%E9%9C%80%E5%93%81/" title="休闲急需品">休闲急需品</a><time datetime="2026-03-05T00:35:53.000Z" title="发表于 2026-03-05 08:35:53">2026-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/05/%E5%9B%9E%E9%A6%96%E9%81%A5%E6%9C%9B%EF%BC%8C%E8%BD%BB%E8%88%9F%E5%B7%B2%E8%BF%87%E4%B8%87%E9%87%8D%E5%B1%B1/" title="回首遥望，轻舟已过万重山"><img src="https://free.picui.cn/free/2026/03/04/69a81776ed5f6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="回首遥望，轻舟已过万重山"/></a><div class="content"><a class="title" href="/2026/03/05/%E5%9B%9E%E9%A6%96%E9%81%A5%E6%9C%9B%EF%BC%8C%E8%BD%BB%E8%88%9F%E5%B7%B2%E8%BF%87%E4%B8%87%E9%87%8D%E5%B1%B1/" title="回首遥望，轻舟已过万重山">回首遥望，轻舟已过万重山</a><time datetime="2026-03-05T00:35:50.000Z" title="发表于 2026-03-05 08:35:50">2026-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/05/2026%E8%BF%87%E5%B9%B4%E6%B8%B8%E8%AE%B0/" title="2026过年游记"><img src="https://free.picui.cn/free/2026/03/04/69a8179759e58.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026过年游记"/></a><div class="content"><a class="title" href="/2026/03/05/2026%E8%BF%87%E5%B9%B4%E6%B8%B8%E8%AE%B0/" title="2026过年游记">2026过年游记</a><time datetime="2026-03-05T00:35:48.000Z" title="发表于 2026-03-05 08:35:48">2026-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/05/%E5%B9%B3%E9%9D%A2%E5%90%91%E9%87%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="平面向量学习笔记"><img src="https://free.picui.cn/free/2026/03/04/69a8237c1fd55.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="平面向量学习笔记"/></a><div class="content"><a class="title" href="/2026/03/05/%E5%B9%B3%E9%9D%A2%E5%90%91%E9%87%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="平面向量学习笔记">平面向量学习笔记</a><time datetime="2026-03-05T00:34:57.000Z" title="发表于 2026-03-05 08:34:57">2026-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/05/Hotpot/" title="Hotpot"><img src="https://free.picui.cn/free/2026/03/04/69a8225f6fb29.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hotpot"/></a><div class="content"><a class="title" href="/2026/03/05/Hotpot/" title="Hotpot">Hotpot</a><time datetime="2026-03-05T00:34:32.000Z" title="发表于 2026-03-05 08:34:32">2026-03-05</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://free.picui.cn/free/2026/03/04/69a8237c1fd55.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Golden_Ridge</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="7002443469" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-lrcType="-1"> </div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script>(() => {
+#### 6.2 包含函数及作用：
+
+
+1. $begin$（）：获取 $\color{cyan}{set}$ 容器的起始地址。
+2. $end$（）：获取 $\color{cyan}{set}$ 容器的结束地址。
+3. $insert$（）：插入 $\color{cyan}{set}$ 容器。
+4. $erase$（开始地址，结束地址）：删除 $\color{cyan}{set}$ 容器指定范围之间的元素。
+5. $find$（）：查找匹配的元素迭代器，若不存在，返回 `set.end()`。
+6. $clear$（）：清空 $\color{cyan}{set}$ 容器。
+7. $size$（）：返回 $\color{cyan}{set}$ 容器中元素的个数。
+8. $empty$（）：$bool$ 类型，判断 $\color{cyan}{set}$ 容器是否为空。
+---
+
+### 7. $\color{cyan}{map}$
+
+- $\color{cyan}{map}$ 是关联容器的一种，容器中的元素通过关键字排序。
+- $\color{cyan}{map}$ 的每个元素都分为关键字和值两部分，并且不允许有多个元素的关键字相同。
+
+#### 7.1 存储方式：
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map&lt;ke,va&gt; vn;</span><br></pre></td></tr></table></figure>
+1. $ke$（$key$）：关键字。
+2. $va$（$value$）：值。
+3. $vn$（$variable$ $name$）：变量名。
+
+#### 7.2 包含函数及作用：
+
+1. $begin$（）：获取 $\color{cyan}{map}$ 的第一个元素的位置，返回第一个元素迭代器。
+2. $end$（）：获取 $\color{cyan}{map}$ 的结束位置（最后一个元素的后面的一个位置）。
+3. $insert$（）：插入元素到 $\color{cyan}{map}$，元素一般是 $make\_pair$（关键字，值）。
+4. $erase$（关键字/迭代器）：删除 $\color{cyan}{map}$ 指定位置或者指定关键字的元素。
+5. $find$（）：返回指定关键字位置的位置迭代器，若不存在，返回 `map.end()`。
+6. $clear$（）：清空 $\color{cyan}{map}$。
+7. $size$（）：返回 $\color{cyan}{map}$ 中元素的个数。
+8. $empty$（）：$bool$ 类型，判断 $\color{cyan}{map}$ 是否为空。
+9. 运算符 $[i]$：取 $\color{cyan}{map}$ 下标为 $i$ 的元素。
+10. $count$（）：统计指定关键字的元素的个数，由于 $\color{cyan}{map}$ 每个元素的关键字都不相同，$count$ 的结果只能是 $1$ 或者 0。
+---
+
+### 小结：
+
+- 数据结构是 $c$++ 中极其重要的部分，从数组到 $\color{cyan}{vector}$，它一步步看着我们变得强大，我们不必追忆，只需向着星辰大海不断前行！
+
+$The$ $end$ $.$
+
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Golden_Ridge</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/03/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">http://example.com/2026/03/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Golden_Ridge</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OI%EF%BC%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%82/">OI，学习笔记，数据结构。</a></div><div class="post-share"><div class="social-share" data-image="https://free.picui.cn/free/2026/03/04/69a81776ed5f6.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/03/05/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="三角函数学习笔记"><img class="cover" src="https://free.picui.cn/free/2026/03/04/69a8237c1fd55.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">三角函数学习笔记</div></div><div class="info-2"><div class="info-item-1"> # 三角函数学习笔记 ## Part.0 目录 - 任意角与弧度制   - 任意角   - 弧度制 - 三角函数基础知识   - 三角函数新定义   - 同角三角函数关系 - 正弦定理及其应用   - 叙述并证明正弦定理  ## Part.1 任意角与弧度制  ### 1.1 任意角  这，是我们在小学二年级就学过的角，由**两条射线**（边）和**一个顶点**组成，**两条射线**（边）的**夹角**的度数就是这个角的度数。  ![屏幕截图 2026-01-15 225845](https://img2024.cnblogs.com/blog/3759109/202601/3759109-20260115225917883-748634922.png)  这个定义对于广大小学生与初中生群体来说，再熟悉不过了。但是，在生活中，我们难免会遇到比 $360^\circ$ 还要大得多的角，为解决这个问题，我们就要引出**任意角**。  ![屏幕截图 2026-01-15 230055](https://img2024.cnblogs.com/blog/3759109/202601/3...</div></div></div></a><a class="pagination-related" href="/2026/03/05/%E9%B8%AD%E6%A3%8B/" title="鸭棋"><img class="cover" src="https://free.picui.cn/free/2026/03/04/69a81794f3614.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">鸭棋</div></div><div class="info-2"><div class="info-item-1"> # 题解：P5380 [THUPC 2019] 鸭棋 ### 前置芝士：模拟。 ### 推荐题目： 1. [P2482 [SDOI2010] 猪国杀](https://www.luogu.com.cn/problem/P2482)。 2. [P4911 河童重工的计算机](https://www.luogu.com.cn/problem/P4911)。 3. [P7147 [THUPC 2021 初赛] 麻将模拟器](https://www.luogu.com.cn/problem/P7147)。 ## 写在前面  这道题是本人第一道**独立完成**的大模拟，前后一共用了 $15$ 个小时左右，特写此文以示纪念。  在完成的过程中，我有好几次卡壳的地方：  1. 绊脚的位置（马，象，鸭**各一次**）。 2. 判断将军（一次）。 3. 坐标的位置（反了一次）。 4. 判断游戏结束（忘记一次）。  这些等会儿会**重点**讲。  以下正文中，如出现 $cpp$ 框，要么是代码，要么是模拟**棋盘**。模拟棋盘中，$wu$ 表示空格，$ba$ 表示绊脚，其他棋子用拼音中的前两个字母...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Golden_Ridge</div><div class="author-info-description">欢迎来到Golden_Ridge的个人博客</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Mirror-victor" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="/2896195463@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/03/05/%E4%BC%91%E9%97%B2%E6%80%A5%E9%9C%80%E5%93%81/" title="休闲急需品"><img src="https://free.picui.cn/free/2026/03/04/69a8179759e58.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="休闲急需品"/></a><div class="content"><a class="title" href="/2026/03/05/%E4%BC%91%E9%97%B2%E6%80%A5%E9%9C%80%E5%93%81/" title="休闲急需品">休闲急需品</a><time datetime="2026-03-05T00:35:53.000Z" title="发表于 2026-03-05 08:35:53">2026-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/05/%E5%9B%9E%E9%A6%96%E9%81%A5%E6%9C%9B%EF%BC%8C%E8%BD%BB%E8%88%9F%E5%B7%B2%E8%BF%87%E4%B8%87%E9%87%8D%E5%B1%B1/" title="回首遥望，轻舟已过万重山"><img src="https://free.picui.cn/free/2026/03/04/69a8237c1fd55.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="回首遥望，轻舟已过万重山"/></a><div class="content"><a class="title" href="/2026/03/05/%E5%9B%9E%E9%A6%96%E9%81%A5%E6%9C%9B%EF%BC%8C%E8%BD%BB%E8%88%9F%E5%B7%B2%E8%BF%87%E4%B8%87%E9%87%8D%E5%B1%B1/" title="回首遥望，轻舟已过万重山">回首遥望，轻舟已过万重山</a><time datetime="2026-03-05T00:35:50.000Z" title="发表于 2026-03-05 08:35:50">2026-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/05/2026%E8%BF%87%E5%B9%B4%E6%B8%B8%E8%AE%B0/" title="2026过年游记"><img src="https://free.picui.cn/free/2026/03/04/69a8225a4c4f1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026过年游记"/></a><div class="content"><a class="title" href="/2026/03/05/2026%E8%BF%87%E5%B9%B4%E6%B8%B8%E8%AE%B0/" title="2026过年游记">2026过年游记</a><time datetime="2026-03-05T00:35:48.000Z" title="发表于 2026-03-05 08:35:48">2026-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/05/%E5%B9%B3%E9%9D%A2%E5%90%91%E9%87%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="平面向量学习笔记"><img src="https://free.picui.cn/free/2026/03/04/69a8225f6fb29.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="平面向量学习笔记"/></a><div class="content"><a class="title" href="/2026/03/05/%E5%B9%B3%E9%9D%A2%E5%90%91%E9%87%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="平面向量学习笔记">平面向量学习笔记</a><time datetime="2026-03-05T00:34:57.000Z" title="发表于 2026-03-05 08:34:57">2026-03-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/05/Hotpot/" title="Hotpot"><img src="https://free.picui.cn/free/2026/03/04/69a8179759e58.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hotpot"/></a><div class="content"><a class="title" href="/2026/03/05/Hotpot/" title="Hotpot">Hotpot</a><time datetime="2026-03-05T00:34:32.000Z" title="发表于 2026-03-05 08:34:32">2026-03-05</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://free.picui.cn/free/2026/03/04/69a8237c1fd55.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Golden_Ridge</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="7002443469" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-lrcType="-1"> </div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script>(() => {
   const destroyAplayer = () => {
     if (window.aplayers) {
       for (let i = 0; i < window.aplayers.length; i++) {
